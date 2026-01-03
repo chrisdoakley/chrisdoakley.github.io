@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Famous People – Current Age</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f6f6f6;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 600px;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Famous People – Current Age</h1>
+
+<table id="ageTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date of birth</th>
+      <th>Current age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows added by JavaScript -->
+  </tbody>
+</table>
+
+<script>
+  // List of people
+  const people = [
+    { name: "David Bowie", dob: "1947-01-08" },
+    { name: "Madonna", dob: "1958-08-16" },
+    { name: "Lionel Messi", dob: "1987-06-24" },
+    { name: "Emma Watson", dob: "1990-04-15" }
+  ];
+
+  function calculateAge(dobString) {
+    const today = new Date();
+    const dob = new Date(dobString);
+
+    let years = today.getFullYear() - dob.getFullYear();
+    let months = today.getMonth() - dob.getMonth();
+
+    if (today.getDate() < dob.getDate()) {
+      months--;
+    }
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    return `${years} years, ${months} months`;
+  }
+
+  function populateTable() {
+    const tbody = document.querySelector("#ageTable tbody");
+    tbody.innerHTML = "";
+
+    people.forEach(person => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${person.name}</td>
+        <td>${person.dob}</td>
+        <td>${calculateAge(person.dob)}</td>
+      `;
+
+      tbody.appendChild(row);
+    });
+  }
+
+  populateTable();
+</script>
+
+</body>
+</html>
