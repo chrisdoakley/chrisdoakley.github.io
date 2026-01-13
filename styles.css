@@ -44,6 +44,11 @@ body {
 }
 
 /* Work or Projects */
+h3 {
+	padding-bottom: 1em;
+}
+
+
 .project {
     display: flex;
     flex-wrap: wrap;
