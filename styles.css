@@ -59,11 +59,12 @@ body {
     object-fit: cover;
 }
 
-.project img.floatright {
-    max-width: 300px;
-    float: right;
-	padding-left: 20px;
-	padding-bottom: 20px;
+.float-right-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  float: right;
+  margin: 0 0 1em 1em;
 }
 
 .project-info {
