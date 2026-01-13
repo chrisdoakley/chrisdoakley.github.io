@@ -67,6 +67,10 @@ body {
   margin: 0 0 1em 1em;
 }
 
+.project-content {
+  display: block; /* important */
+}
+
 .project-info {
     max-width: 550px;
 }
