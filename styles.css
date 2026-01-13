@@ -43,7 +43,7 @@ body {
     color: #222;
 }
 
-/* Projects */
+/* Work or Projects */
 .project {
     display: flex;
     flex-wrap: wrap;
@@ -57,6 +57,13 @@ body {
     max-width: 300px;
     border-radius: 6px;
     object-fit: cover;
+}
+
+.project img.floatright {
+    max-width: 300px;
+    float: right;
+	padding-left: 20px;
+	padding-bottom: 20px;
 }
 
 .project-info {
