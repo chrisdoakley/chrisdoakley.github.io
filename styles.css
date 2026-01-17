@@ -37,6 +37,10 @@ body {
     margin-top: 40px;
 }
 
+.section p {
+    margin-bottom: 10px;
+}
+
 .section h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
