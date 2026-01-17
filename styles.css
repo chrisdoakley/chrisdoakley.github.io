@@ -43,6 +43,7 @@ body {
 
 .section p.caption {
     padding-top: 5px;
+	padding-top: 12px;
 	font-size: 80%;
 	font-style: italic;
 }
