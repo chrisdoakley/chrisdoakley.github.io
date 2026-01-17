@@ -42,9 +42,8 @@ body {
 }
 
 .section p.caption {
-    padding-top: 5px;
-	padding-top: 12px;
-	font-size: 80%;
+    padding: 5px 0 5px 0;
+	font-size: 90%;
 	font-style: italic;
 }
 
